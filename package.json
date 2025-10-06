@@ -1,0 +1,34 @@
+{
+  "name": "banco_backend_comidas",
+  "version": "1.0.0",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon server.js",
+    "studio": "npx prisma studio"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rafael-1108/banco_backend_comidas.git"
+  },
+  "keywords": [
+    "bd",
+    "back",
+    "senai"
+  ],
+  "author": "Rafinha",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Rafael-1108/banco_backend_comidas/issues"
+  },
+  "homepage": "https://github.com/Rafael-1108/banco_backend_comidas#readme",
+  "description": "",
+  "dependencies": {
+    "@prisma/client": "^6.16.3",
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "nodemon": "^3.1.10",
+    "prisma": "^6.16.3"
+  }
+}
