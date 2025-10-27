@@ -3,10 +3,16 @@
   "version": "1.0.0",
   "main": "server.js",
   "type": "module",
+  "prisma":{
+    "seed": "node prisma/seed.js"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon server.js",
-    "studio": "npx prisma studio"
+    "studio": "npx prisma studio",
+    "prisma:generate": "dotenv -e .env npx prisma generate",
+    "migrate:dev": "dotenv -e .env npx prisma migrate dev",
+    "prisma:studio": "dotenv -e .env npx prisma studio"
   },
   "repository": {
     "type": "git",
@@ -25,10 +31,13 @@
   "homepage": "https://github.com/Rafael-1108/banco_backend_comidas#readme",
   "description": "",
   "dependencies": {
-    "@prisma/client": "^6.16.3",
     "dotenv": "^17.2.3",
     "express": "^5.1.0",
-    "nodemon": "^3.1.10",
-    "prisma": "^6.16.3"
+    "nodemon": "^3.1.10"
+  },
+  "devDependencies": {
+    "@prisma/client": "^6.18.0",
+    "dotenv-cli": "^10.0.0",
+    "prisma": "^6.18.0"
   }
 }

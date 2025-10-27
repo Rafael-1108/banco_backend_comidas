@@ -5,21 +5,21 @@ export const listarTodos = async (req, res) => {
         const comidas = await ComidaModel.findAll();
 
         if (!comidas || comidas.length === 0) {
-            res.status(404).json({
+            return res.status(404).json({
                 total: comidas.length,
                 mensagem: 'Não há comidas na lista',
                 comidas
             })
         }
 
-        res.status(200).json({
+        return res.status(200).json({
             total: comidas.length,
             mensagem: 'Lista de comidas',
             comidas
         })
 
     } catch (error) {
-        res.status(500).json({
+        return res.status(500).json({
             erro: 'Erro interno de servidor',
             detalhes: error.message,
             status: 500
