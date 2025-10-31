@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "server.js",
   "type": "module",
-  "prisma":{
+  "prisma": {
     "seed": "node prisma/seed.js"
   },
   "scripts": {
@@ -12,7 +12,8 @@
     "studio": "npx prisma studio",
     "prisma:generate": "dotenv -e .env npx prisma generate",
     "migrate:dev": "dotenv -e .env npx prisma migrate dev",
-    "prisma:studio": "dotenv -e .env npx prisma studio"
+    "prisma:studio": "dotenv -e .env npx prisma studio",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
@@ -29,7 +30,6 @@
     "url": "https://github.com/Rafael-1108/banco_backend_comidas/issues"
   },
   "homepage": "https://github.com/Rafael-1108/banco_backend_comidas#readme",
-  "description": "",
   "dependencies": {
     "dotenv": "^17.2.3",
     "express": "^5.1.0",
@@ -39,5 +39,6 @@
     "@prisma/client": "^6.18.0",
     "dotenv-cli": "^10.0.0",
     "prisma": "^6.18.0"
-  }
+  },
+  "description": ""
 }
